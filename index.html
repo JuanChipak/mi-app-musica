@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <title>Miusic Enfoque</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>🎧 Miusic Enfoque</h1>
+    <p>Elige tu estado:</p>
+    <div class="botones">
+      <button onclick="seleccionarModo('estudiar')">📚 Estudiar</button>
+      <button onclick="seleccionarModo('trabajar')">💼 Trabajar</button>
+      <button onclick="seleccionarModo('meditar')">🧘 Meditar</button>
+    </div>
+
+    <div id="reproductor-container">
+        <audio id="reproductor" controls autoplay hidden>
+          Tu navegador no soporta audio.
+        </audio>
+      </div>      
+
+      <div id="pomodoro">
+        <h2>⏱️ Temporizador </h2>
+        <div id="timer">25:00</div>
+        <button onclick="iniciarPomodoro()">▶️ Iniciar</button>
+      </div>
+      <div id="musica-lista">
+
+        <h2>🎶 Elige tu música</h2>
+        <select id="musica-selector" onchange="cambiarMusica()">
+          <option value="estudiar">Estudiar (Lo-Fi)</option>
+          <option value="trabajar">Trabajar (Instrumental)</option>
+          <option value="meditar">Meditar (Relajante)</option>
+        </select>
+      </div>
+
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+</body>
+</html>
+
