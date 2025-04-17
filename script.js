@@ -10,7 +10,7 @@ function actualizarTimer() {
 
 function seleccionarModo(modo) {
   const contenedor = document.getElementById("reproductor-container");
-  contenedor.innerHTML = ""; // Limpiamos el contenido anterior
+  contenedor.innerHTML = ""; 
 
   const iframe = document.createElement("iframe");
   iframe.width = "100%";
