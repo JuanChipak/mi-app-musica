@@ -7,8 +7,6 @@ const urlsToCache = [
   '/icono192.png',
   '/icono512.png'
 ];
-
-// Instalar el service worker
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches.open(CACHE_NAME).then((cache) => {
@@ -17,8 +15,6 @@ self.addEventListener('install', (event) => {
     })
   );
 });
-
-// Activar el service worker
 self.addEventListener('activate', (event) => {
   const cacheWhitelist = [CACHE_NAME];
   event.waitUntil(
@@ -34,7 +30,6 @@ self.addEventListener('activate', (event) => {
   );
 });
 
-// Recuperar archivos desde el cache (funciona offline)
 self.addEventListener('fetch', (event) => {
   event.respondWith(
     caches.match(event.request).then((cachedResponse) => {
